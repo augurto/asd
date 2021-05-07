@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<script>
+var colorMarcado="#5AB";
+var colorDesactivado="#FFF";
+function colorea(objActual, elem) {
+    var checkado=objActual.checked;
+    //buscamos el elemento a colorear, denotado con "elem"
+    while( objActual.nodeType==1 && objActual.tagName.toUpperCase()!=elem.toUpperCase() )
+        objActual=objActual.parentNode;
+    //objActual será entonces el primer padre con etiqueta "elem"
+    if(checkado) objActual.style.backgroundColor=colorMarcado;
+    else objActual.style.backgroundColor=colorDesactivado;
+}
+</script>
+
+<form name="form1" action="" method="post">
+<table border="1">
+    <tbody>
+    <tr>
+        <td>Colorear Fila</td>
+        <td align="center" class=ts><input name="op1" type="checkbox" onclick="colorea(this,'BODY')"></td>
+    </tr>
+    <tr>
+        <td>Colorear Fila</td>
+        <td align="center" class=ts><input name="op2" type="checkbox" onclick="colorea(this,'TABLE')"></td>
+    </tr>
+    <tr>
+        <td>Colorear Fila</td>
+        <td align="center" class=ts><input name="op3" type="checkbox" onclick="colorea(this,'TBODY')"></td>
+    </tr>
+    <tr>
+        <td>Colorear Fila</td>
+        <td align="center" class=ts><input name="op4" type="checkbox"  id="idchkProyecto" onclick="colorea(this,'TR')"></td>
+    </tr>
+    <tr>
+        <td>Colorear Fila</td>
+        <td align="center" class=ts><input name="op5" type="checkbox" onclick="colorea(this,'TD')"></td>
+    </tr>
+    </tbody>
+</table>
+</form>
+
+<script>
+
+checkbox = document.getElementById('idchkProyecto')
+checkbox.checked = eval(window.localStorage.getItem(checkbox.id))
+
+checkbox.addEventListener('change', function(){
+    window.localStorage.setItem(checkbox.id, checkbox.checked)
+})
+
+</script> 
+</body>
+</html>
