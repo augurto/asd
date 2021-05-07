@@ -1,0 +1,4 @@
+ALTER TABLE `tbl_notifications`
+	ADD COLUMN `sale_id` INT(15) NOT NULL AFTER `notification`;
+ALTER TABLE `tbl_notification_bar_kitchen_panel`
+	ADD COLUMN `sale_id` INT(15) NOT NULL AFTER `notification`;
