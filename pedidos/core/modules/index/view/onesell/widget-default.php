@@ -118,7 +118,9 @@ switch ($sell->item_id) {
 
 <?php endif; ?>
 
-
+<div>
+  <p>prubea</p>
+</div>
 
 <div class="clearfix"></div><br>
 
@@ -272,10 +274,10 @@ switch ($sell->item_id) {
 $user = UserData::getById(Session::getUID());
 if($user->is_admin):?>
 
-<!--
+
 <a href="index.php?view=removesell&id=<?php echo $_GET["id"]; ?>" class="btn pull-right btn-danger"><i class="glyphicon glyphicon-remove"></i> Cancelar</a>
 
--->
+
 
 <?php endif ?>
 <?php endif ?>
