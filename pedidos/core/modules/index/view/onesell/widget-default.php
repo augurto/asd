@@ -121,6 +121,7 @@ switch ($sell->item_id) {
 <div>
   <p>prubea</p>
   <input type="text" name="id" id="" placeholder="<?php echo $_GET["id"]; ?>">
+  
 </div>
 
 <div class="clearfix"></div><br>
