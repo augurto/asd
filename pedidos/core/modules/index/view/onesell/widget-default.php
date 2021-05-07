@@ -114,7 +114,7 @@ switch ($sell->item_id) {
 
 
 
-<a href="index.php?view=onesell2&id=<?php echo $_GET["id"]; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> Comanda2</a>
+<a href="index.php?view=onesell2&id=<?php echo $_GET["id"]; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> Comanda...</a>
 
 <?php endif; ?>
 
